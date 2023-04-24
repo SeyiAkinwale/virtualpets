@@ -27,6 +27,7 @@ Pet::Pet(string nm, int initialHealth)
 void Pet::eat(int amt)
 {
       // TODO: Increase the pet's health by the amount
+  m_health+=amt;
 }
 
 void Pet::play()
@@ -38,14 +39,14 @@ string Pet::name() const
 {
       // TODO: Return the pet's name.  Delete the following line and
       // replace it with the correct code.
-    return ""; // This implementation compiles, but is incorrect
+    return m_name; 
 }
 
 int Pet::health() const
 {
       // TODO: Return the pet's current health level.  Delete the
       // following line and replace it with the correct code.
-    return 99; // This implementation compiles, but is incorrect
+    return m_health;
 }
 
 bool Pet::alive() const
@@ -92,14 +93,14 @@ void careFor(Pet* p, int d)
 int main()
 {
      Pet* myPets[2];
-//     myPets[0] = new Pet("Fluffy", 2);
-//     myPets[1] = new Pet("Frisky", 4);
-//     for (int day = 1; day <= 9; day++)
-//     {
-//         cout << "======= Day " << day << endl;
-//         for (int k = 0; k < 2; k++)
-//             careFor(myPets[k], day);
-//     }
+     myPets[0] = new Pet("Fluffy", 2);
+     myPets[1] = new Pet("Frisky", 4);
+    for (int day = 1; day <= 9; day++)
+    {
+        cout << "======= Day " << day << endl;
+        for (int k = 0; k < 2; k++)
+            careFor(myPets[k], day);
+    }
 //     cout << "=======" << endl;
 //     for (int k = 0; k < 2; k++)
 //     {
