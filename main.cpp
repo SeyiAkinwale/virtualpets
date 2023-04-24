@@ -91,7 +91,7 @@ void careFor(Pet* p, int d)
 
 int main()
 {
-//     Pet* myPets[2];
+     Pet* myPets[2];
 //     myPets[0] = new Pet("Fluffy", 2);
 //     myPets[1] = new Pet("Frisky", 4);
 //     for (int day = 1; day <= 9; day++)
